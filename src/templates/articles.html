@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}{% endblock %}
+
+{% block content %}
+  <h2>Articles PAGE</h2>
+  <!--{{topic_list}}-->
+  <ul class = "list-group"></ul>
+  {% for article in topic_list %}
+    <li class = "list-group-item"><a href = "article/{{article.id}}">{{article.title}}</a></li>
+  {% endfor %}
+
+{%  endblock %}
+
+{% block footer %}
+  <!--&copy; Copyright 2019 by <a href="#">BaronKimaru</a>.-->
+{% endblock %}
